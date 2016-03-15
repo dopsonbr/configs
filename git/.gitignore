@@ -1,0 +1,8 @@
+#gitignore 
+
+*.jar
+*.class
+*~
+*.swp
+*/target/
+*.idea/
