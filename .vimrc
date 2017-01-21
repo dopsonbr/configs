@@ -22,7 +22,7 @@ if dein#check_install()
 
 let g:deoplete#enable_at_startup = 1
 " reduce the update time for git-gutter
-updatetime=250
+set updatetime=250
 filetype plugin indent on
 syntax enable
 "End dein Scripts-------------------------
