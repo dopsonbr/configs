@@ -20,6 +20,9 @@ sh ~/.config/dein/installer.sh
 tar -xzf source-code-pro-2.030R-ro-1.050R-it.tar.gz
 cp source-code-pro-2.030R-ro-1.050R-it/TTF/*.ttf /Library/Fonts/
 
+# install git pair
+cd /usr/local/bin && curl -L http://github.com/pivotal/git_scripts/tarball/master | gunzip | tar xvf - --strip=2
+
 # dot file setup
 mkdir ~/.config
 ln -s ~/github/dopsonbr/configs/.vimrc ~/.vimrc
