@@ -7,6 +7,7 @@ echo "begin setting up"
 brew install python3
 brew install neovim/neovim/neovim
 brew install Caskroom/cask/shifit
+brew install golang
 
 # install python stuff
 pip3 install virtualenv
@@ -25,10 +26,10 @@ cd /usr/local/bin && curl -L http://github.com/pivotal/git_scripts/tarball/maste
 
 # dot file setup
 mkdir ~/.config
-ln -s ~/github/dopsonbr/configs/.vimrc ~/.vimrc
+ln -s ~/github.com/dopsonbr/configs/.vimrc ~/.vimrc
 mkdir ~/.config/nvim
 #ln -s ~/.vim ~/.config/nvim
-ln -s ~/github/dopsonbr/configs/.vimrc ~/.config/nvim/init.vim
+ln -s ~/github.com/dopsonbr/configs/.vimrc ~/.config/nvim/init.vim
 
 # setup zsh
 # install oh-my-zsh
