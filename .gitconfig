@@ -1,0 +1,7 @@
+[filter "lfs"]
+	required = true
+	clean = git-lfs clean %f
+	smudge = git-lfs smudge %f
+[user]
+	name = Dopson, Brian
+	email = BRIAN_DOPSON1@homedepot.com
