@@ -6,7 +6,7 @@ echo "begin setting up"
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 brew install python3
 brew install neovim/neovim/neovim
-brew install Caskroom/cask/shifit
+brew install Caskroom/cask/shiftit
 brew install golang
 
 # install python stuff
@@ -26,7 +26,7 @@ cd /usr/local/bin && curl -L http://github.com/pivotal/git_scripts/tarball/maste
 
 # dot file setup
 mkdir ~/.config
-ln -s ~/github.com/dopsonbr/configs/.vimrc ~/.vimrc
+ln -s ~/github/dopsonbr/configs/.vimrc ~/.vimrc
 mkdir ~/.config/nvim
 #ln -s ~/.vim ~/.config/nvim
 ln -s ~/github.com/dopsonbr/configs/.vimrc ~/.config/nvim/init.vim
