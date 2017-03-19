@@ -2,12 +2,7 @@
 
 echo "begin setting up"
 
-# brew install
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-brew install python3
-brew install neovim/neovim/neovim
-brew install Caskroom/cask/shiftit
-brew install golang
+source install-apps-with-brew.sh
 
 # install python stuff
 pip3 install virtualenv
