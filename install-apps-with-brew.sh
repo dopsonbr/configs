@@ -11,6 +11,14 @@ brew install scala
 brew install sbt
 
 # utils
+brew install coreutils
+brew install findutils
+# update path 
+#PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
+#PATH="/usr/local/opt/findutils/libexec/gnubin:$PATH"
+#MANPATH="/usr/local/opt/findutils/libexec/gnuman:$MANPATH"
+#MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
+
 brew install tree
 brew install httpie
 brew install git
@@ -32,3 +40,4 @@ brew install neovim/neovim/neovim
 brew install Caskroom/cask/iterm2
 brew install maven
 brew install gradle
+
