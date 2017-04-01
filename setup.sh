@@ -1,5 +1,7 @@
 #!/bin/bash
 
+sudo -v
+
 OPTIONS_TEXT="-a setup apps, -f setup font, -n setup nvim config, z setup ohmyzsh"
 USAGE_TEXT="Usage:$0 [-afnz]"
 display_help() { 
@@ -19,11 +21,11 @@ while getopts ":atfnzh" opt; do
 	a) 
 	  source apps_setup.sh
 	  ;;
-	n)
-	  source neovim_setup.sh
-	  ;;
 	f)
 	  source font_setup.sh
+	  ;;
+	n)
+	  source neovim_setup.sh
 	  ;;
 	z)
 	  source zsh_setup.sh

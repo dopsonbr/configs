@@ -46,7 +46,8 @@ set tabstop=2
 set expandtab
 " size of an "indent"
 set shiftwidth=2
-
+set splitright
+set splitbelow
 "set ignorecase
 "set smartcase
 "set autochdir
