@@ -1,34 +1,36 @@
 #!/bin/bash
 
-echo "begin setting up"
+OPTIONS_TEXT="-a setup apps, -f setup font, -n setup nvim config, z setup ohmyzsh"
+USAGE_TEXT="Usage:$0 [-afnz]"
+display_help() { 
+  echo "$USAGE_TEXT"
+  echo "$OPTIONS_TEXT"
+  exit 1
+}
 
-source install-apps-with-brew.sh
+while getopts ":atfnzh" opt; do
+  case ${opt} in
+	h)
+	  display_help
+	  ;;
+	t)
+	  source test_setup.sh
+	  ;;
+	a) 
+	  source apps_setup.sh
+	  ;;
+	n)
+	  source neovim_setup.sh
+	  ;;
+	f)
+	  source font_setup.sh
+	  ;;
+	z)
+	  source zsh_setup.sh
+	  ;;
+	\?)
+	  echo "Invalid option: -$OPTARG" >&2
+	  ;;
+	esac
+done
 
-# install python stuff
-pip3 install virtualenv
-pip3 install --user --upgrade neovim
-pip3 install jedi
-mkdir ~/.config/dein
-curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > ~/.config/dein/installer.sh
-sh ~/.config/dein/installer.sh
-
-# setup font
-tar -xzf source-code-pro-2.030R-ro-1.050R-it.tar.gz
-cp source-code-pro-2.030R-ro-1.050R-it/TTF/*.ttf /Library/Fonts/
-
-# install git pair
-cd /usr/local/bin && curl -L http://github.com/pivotal/git_scripts/tarball/master | gunzip | tar xvf - --strip=2
-
-# dot file setup
-mkdir ~/.config
-ln -s ~/github/dopsonbr/configs/.vimrc ~/.vimrc
-mkdir ~/.config/nvim
-#ln -s ~/.vim ~/.config/nvim
-ln -s ~/github.com/dopsonbr/configs/.vimrc ~/.config/nvim/init.vim
-
-# setup zsh
-# install oh-my-zsh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-echo "set -o vi" >> ~/.zshrc
-echo "alias nv=nvim" >> ~/.zshrc
-# setup iterm profile

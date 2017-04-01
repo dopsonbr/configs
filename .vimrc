@@ -12,6 +12,7 @@ if dein#load_state('/Users/briandopson/.config/dein/repos')
 	call dein#add('fatih/vim-go') 
 	call dein#add('airblade/vim-gitgutter') 
 	call dein#add('vim-airline/vim-airline')
+	call dein#add('scrooloose/nerdtree')
 	call dein#end()
   call dein#save_state()
 endif
@@ -40,11 +41,11 @@ let g:python3_host_prog = '/usr/local/bin/python3'
 set statusline+=%F
 
 " size of a hard tabstop
-"set tabstop=2
+set tabstop=2
 " always uses spaces instead of tab characters
-"set expandtab
+set expandtab
 " size of an "indent"
-"set shiftwidth=2
+set shiftwidth=2
 
 "set ignorecase
 "set smartcase

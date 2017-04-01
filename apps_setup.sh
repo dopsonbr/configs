@@ -17,6 +17,7 @@ brew install git
 brew install Caskroom/cask/shiftit
 brew install docker
 brew install kafkacat
+brew install shellcheck 
 
 # runtimes
 brew install node
@@ -32,3 +33,5 @@ brew install neovim/neovim/neovim
 brew install Caskroom/cask/iterm2
 brew install maven
 brew install gradle
+brew install Caskroom/cask/transmission
+
