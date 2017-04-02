@@ -1,6 +1,5 @@
 #!/bin/bash
 
-sudo -v
 # install brew
 BREW_EXISTS="$(brew --version | grep -ci "homebrew" )"
 if [[ -z $BREW_EXISTS ]]; then
@@ -12,7 +11,7 @@ APPS=( 'python3' 'golang' 'Caskroom/cask/java' 'scala' 'sbt' \
   'docker' 'kafkacat' 'shellcheck' 'node' 'nginx' \
   'Caskroom/cask/intellij-idea' 'Caskroom/cask/pycharm-ce' 'Caskroom/cask/sublime-text' \
   'neovim/neovim/neovim' 'Caskroom/cask/iterm2' 'maven' 'gradle' \
-  'Caskroom/cask/transmission' 'Caskroom/cask/google-chrome' )
+  'Caskroom/cask/transmission' 'Caskroom/cask/google-chrome' 'diff-so-fancy' )
 
 for APP in "${APPS[@]}"; do
   brew install $APP
