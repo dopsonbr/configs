@@ -65,6 +65,8 @@ set smartcase
 set number
 set autoread
 
+" YANK TO CLIPBOARD
+set clipboard+=unnamedplus
 
 " Handy short cuts
 " autoformt gg=G
