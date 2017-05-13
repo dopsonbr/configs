@@ -30,24 +30,29 @@ if dein#check_install()
 let g:deoplete#enable_at_startup = 1
 filetype plugin indent on
 syntax enable
-
-" reduce the update time for git-gutter
-set updatetime=250
-
+" tab complete
+inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
 " To close preview window of deoplete automagically
 autocmd CompleteDone * pclose 
 
 let g:python_host_prog = '/usr/local/bin/python'
 let g:python3_host_prog = '/usr/local/bin/python3'
 
+" Gitgutter
+" reduce the update time for git-gutter
+set updatetime=250
+
+" Airline
 " show file name
 set statusline+=%F
 
-" deoplete tab-complete
-inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
-
-" ALE always show status line 
-let g:ale_sign_column_always = 1
+" ALE
+" always show status line 
+" let g:ale_sign_column_always = 1
+" Only lint on save
+let g:ale_lint_on_text_changed = 'never'
+" Do not lint when opening a file
+let g:ale_lint_on_enter = 0
 
 "------------------------------------------------------------------------------
 "  Generic Vim Settings
