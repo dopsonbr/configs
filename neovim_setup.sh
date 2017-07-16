@@ -1,5 +1,6 @@
 #!/bin/bash
 
+DIR="$(cd  "$(dirname $0)"; pwd)"
 echo "start neovim setup"
 
 # install deps
@@ -12,8 +13,6 @@ sh "$HOME/.config/dein/installer.sh" "$HOME/.config/dein"
 
 # dot file setup
 mkdir -p "$HOME/.config/nvim"
-ln -s "$HOME/github/dopsonbr/configs/.vimrc" "$HOME/.config/nvim/init.vim"
-#ln -s ~/github/dopsonbr/configs/.vimrc ~/.vimrc
-#ln -s ~/.vim ~/.config/nvim
+ln -s "${DIR}/init.vim" "$HOME/.config/nvim/init.vim"
 
 echo "end neovim setup"
