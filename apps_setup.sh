@@ -16,3 +16,5 @@ APPS=( 'python3' 'golang' 'Caskroom/cask/java' 'scala' 'sbt' \
 for APP in "${APPS[@]}"; do
   brew install $APP
 done
+
+ls -s "${HOME}/github/dopsonbr/dotfiles/.gitconfig" "${HOME}/.gitconfig"

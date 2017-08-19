@@ -8,6 +8,8 @@ if dein#load_state('/Users/briandopson/.config/dein/repos')
   call dein#add('~/.config/dein/repos/github.com/Shougo/dein.vim')
 	call dein#add('Shougo/deoplete.nvim')
 	call dein#add('fatih/vim-go') 
+  call dein#add('mhartington/nvim-typescript')
+  call dein#add('HerringtonDarkholme/yats.vim')
 	call dein#add('airblade/vim-gitgutter') 
 	call dein#add('vim-airline/vim-airline')
 	call dein#add('scrooloose/nerdtree')
@@ -71,7 +73,7 @@ set number
 set autoread
 
 " YANK TO CLIPBOARD
-set clipboard+=unnamedplus
+"set clipboard+=unnamedplus
 
 " Handy short cuts
 " autoformt gg=G
