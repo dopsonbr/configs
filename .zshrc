@@ -98,6 +98,9 @@ alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome"
 alias tl=todolist
 
 export SCALA_HOME='/usr/local/opt/scala/idea'
-source "${HOME}/google-cloud-sdk/completion.zsh.inc"
-source "${HOME}/google-cloud-sdk/path.zsh.inc"
-export GOOGLE_APPLICATION_CREDENTIALS='Call box-1a7eac808445.json'
+if [[ -f "${HOME}/google-cloud-sdk" ]]; then 
+  source "${HOME}/google-cloud-sdk/completion.zsh.inc"
+  source "${HOME}/google-cloud-sdk/path.zsh.inc"
+  export GOOGLE_APPLICATION_CREDENTIALS='Call box-1a7eac808445.json'
+fi
+
