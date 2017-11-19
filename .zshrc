@@ -96,6 +96,7 @@ cfLoginNP () {
 set -o vi
 alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome"
 alias tl=todolist
+alias dc=docker-compose
 
 export SCALA_HOME='/usr/local/opt/scala/idea'
 if [[ -f "${HOME}/google-cloud-sdk" ]]; then 
@@ -106,3 +107,5 @@ fi
 
 # this must be the last line
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
