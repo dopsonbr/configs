@@ -104,3 +104,5 @@ if [[ -f "${HOME}/google-cloud-sdk" ]]; then
   export GOOGLE_APPLICATION_CREDENTIALS='Call box-1a7eac808445.json'
 fi
 
+# this must be the last line
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

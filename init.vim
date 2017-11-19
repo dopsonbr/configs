@@ -8,9 +8,13 @@ if dein#load_state('/Users/briandopson/.config/dein/repos')
   call dein#add('~/.config/dein/repos/github.com/Shougo/dein.vim')
 	call dein#add('Shougo/deoplete.nvim')
 	call dein#add('fatih/vim-go') 
+	call dein#add('junegunn/fzf.vim') 
   call dein#add('mhartington/nvim-typescript')
+  call dein#add('mileszs/ack.vim')
   call dein#add('HerringtonDarkholme/yats.vim')
 	call dein#add('airblade/vim-gitgutter') 
+	call dein#add('tpope/vim-surround') 
+	call dein#add('kien/ctrlp.vim') 
 	call dein#add('vim-airline/vim-airline')
 	call dein#add('scrooloose/nerdtree')
   call dein#add('w0rp/ale')
@@ -56,6 +60,8 @@ let g:ale_lint_on_text_changed = 'never'
 " Do not lint when opening a file
 let g:ale_lint_on_enter = 0
 
+" AG/ack.vim
+let g:ackprg = 'ag --nogroup --nocolor --column'
 "------------------------------------------------------------------------------
 "  Generic Vim Settings
 "------------------------------------------------------------------------------

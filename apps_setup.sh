@@ -9,18 +9,22 @@ fi
 APPS=( 'bash' \
     'coreutils --with-default-names' \
     'findutils --with-default-names' \
+    'fzf' \
     'git' \
     'golang' \
     'gradle' \
     'httpie' \
-    'kafkacat' 'shellcheck' \
+    'kafkacat' \
     'maven' \
     'node' \
     'nginx' \
     'python3' \
-    'scala' \
     'sbt' \
+    'scala' \
+    'shellcheck' \
+    'the_silver_searcher' \
     'tree' \
+    'zsh-syntax-highlighting' \
     'Caskroom/cask/google-chrome' \
     'Caskroom/cask/intellij-idea' \
     'Caskroom/cask/iterm2' \
@@ -36,5 +40,3 @@ for APP in "${APPS[@]}"; do
   brew install $APP
 done
 
-ls -s "${HOME}/github/dopsonbr/dotfiles/.gitconfig" "${HOME}/.gitconfig"
-'bash'
