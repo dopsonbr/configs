@@ -5,9 +5,13 @@ echo "start neovim setup"
 
 # install deps
 pip3 install virtualenv
+pip2 install --user --upgrade neovim
 pip3 install --user --upgrade neovim
 pip3 install jedi
+
+
 gem install neovim
+npm install -g neovim
 mkdir -p "$HOME/.config/dein"
 curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > "$HOME/.config/dein/installer.sh"
 sh "$HOME/.config/dein/installer.sh" "$HOME/.config/dein"
