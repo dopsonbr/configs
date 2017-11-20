@@ -1,8 +1,9 @@
 #!/bin/bash
 
 # install brew
-BREW_EXISTS="$(brew --version | grep -ci "homebrew" )"
-if [[ -z $BREW_EXISTS ]]; then
+which brew
+r=$?
+if [ $r == 0 ]; then
   /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
 
@@ -26,17 +27,13 @@ APPS=( 'bash' \
     'tree' \
     'zsh-syntax-highlighting' \
     'Caskroom/cask/google-chrome' \
-    'Caskroom/cask/intellij-idea' \
     'Caskroom/cask/iterm2' \
     'Caskroom/cask/java' \
     'neovim/neovim/neovim' \
     'Caskroom/cask/shiftit' \
-    'Caskroom/cask/pycharm-ce' \
-    'Caskroom/cask/sublime-text' \
-    'Caskroom/cask/transmission' \
     'caskroom/cask/insomnia' )
 
-for APP in "${APPS[@]}"; do
-  brew install $APP
+for app in "${APPS[@]}"; do
+  brew install $app || brew upgrade $app
 done
 
