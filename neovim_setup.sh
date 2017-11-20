@@ -10,14 +10,17 @@ pip3 install --user --upgrade neovim
 pip3 install jedi
 
 
-gem install neovim
+gem install neovim || sudo gem install neovim
 npm install -g neovim
-mkdir -p "$HOME/.config/dein"
-curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > "$HOME/.config/dein/installer.sh"
-sh "$HOME/.config/dein/installer.sh" "$HOME/.config/dein"
 
-# dot file setup
-mkdir -p "$HOME/.config/nvim"
-ln -s "${DIR}/init.vim" "$HOME/.config/nvim/init.vim"
+# dont reinstall plugins. This script is also used for upgrading
+if [ ! -d ${HOME}/.config/dein ] ; then 
+  mkdir -p "$HOME/.config/dein"
+  curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > "$HOME/.config/dein/installer.sh"
+  sh "$HOME/.config/dein/installer.sh" "$HOME/.config/dein"
 
+  # dot file setup
+  mkdir -p "$HOME/.config/nvim"
+  ln -s "${DIR}/init.vim" "$HOME/.config/nvim/init.vim"
+fi
 echo "end neovim setup"
