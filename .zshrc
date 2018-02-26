@@ -75,7 +75,7 @@ fi
 source "${HOME}/.config/secrets.sh"
 source "${HOME}/github/dopsonbr/dotfiles/thd_defaults.sh"
 
-test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+#test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
 alias nv=nvim
 alias vi=nvim
@@ -109,3 +109,4 @@ fi
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+alias gs="git status"
