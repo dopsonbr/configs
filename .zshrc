@@ -93,7 +93,6 @@ cfLoginNP () {
     --skip-ssl-validation
 }
 
-set -o vi
 alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome"
 alias tl=todolist
 alias dc=docker-compose
