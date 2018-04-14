@@ -1,0 +1,3 @@
+[submodule "custom-iterm-applescripts-for-alfred"]
+	path = custom-iterm-applescripts-for-alfred
+	url = https://github.com/stuartcryan/custom-iterm-applescripts-for-alfred
