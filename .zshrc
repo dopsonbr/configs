@@ -51,7 +51,7 @@ COMPLETION_WAITING_DOTS="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git vi-mode gradle tmux colored-man-pages)
+plugins=(git gradle ruby httpie yarn colored-man-pages)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -72,10 +72,13 @@ fi
 # ssh
 # export SSH_KEY_PATH="~/.ssh/rsa_id"
 
-source "${HOME}/.config/secrets.sh"
+if [[ -f ${HOME}/.config/secrets.sh ]]; then 
+  source "${HOME}/.config/secrets.sh"
+fi
+
 source "${HOME}/github/dopsonbr/dotfiles/thd_defaults.sh"
 
-#test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
 alias nv=nvim
 alias vi=nvim
