@@ -68,7 +68,7 @@ if [[ -n $SSH_CONNECTION ]]; then
 else
   export EDITOR='nvim'
 fi
-
+export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
 # ssh
 # export SSH_KEY_PATH="~/.ssh/rsa_id"
 
