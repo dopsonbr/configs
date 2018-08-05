@@ -6,6 +6,7 @@ set runtimepath+=~/.config/dein/repos/github.com/Shougo/dein.vim
 if dein#load_state('/Users/briandopson/.config/dein/repos')
   call dein#begin('~/.config/dein')
   call dein#add('~/.config/dein/repos/github.com/Shougo/dein.vim')
+  call dein#add('rizzatti/dash.vim')
   call dein#add('udalov/kotlin-vim')
   call dein#add('Shougo/deoplete.nvim')
   call dein#add('fatih/vim-go') 
