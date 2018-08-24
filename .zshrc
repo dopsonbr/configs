@@ -85,6 +85,8 @@ alias vi=nvim
 alias gh="cd ${HOME}/github/homedepot"
 alias ga="cd ${HOME}/github/homedepot/assistedselling"
 alias gd="cd ${HOME}/github/dopsonbr"
+alias gs="git status"
+alias cat="bat"
 
 cfLoginNP () {
   cf login \
@@ -109,8 +111,7 @@ fi
 
 export GOPATH="${HOME}/go"
 export PATH="${PATH}:${GOPATH}/bin"
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 # this must be the last line
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-alias gs="git status"
