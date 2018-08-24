@@ -8,14 +8,19 @@ if [ $r == 0 ]; then
 fi
 
 APPS=( 'bash' \
+    'bat' \
     'coreutils --with-default-names' \
+    'diff-so-fancy' \
     'findutils --with-default-names' \
+    'fish' \
+    'fd' \
     'fzf' \
     'git' \
     'golang' \
     'gradle' \
     'httpie' \
     'kafkacat' \
+    'lazygit' \
     'maven' \
     'node' \
     'nginx' \
@@ -37,3 +42,4 @@ for app in "${APPS[@]}"; do
   brew install $app || brew upgrade $app
 done
 
+$(brew --prefix)/opt/fzf/install
