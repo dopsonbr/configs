@@ -2,11 +2,13 @@
 # Env
 set -x EDITOR nvim
 set -x SHELL fish
-
+set -U fish_key_bindings fish_vi_key_bindings
 # Alias
 abbr -a nv nvim
 abbr -a gd cd ~/github/dopsonbr
 abbr -a gh cd ~/github/homedepot/assistedselling
+abbr -a gs git status
+abbr -a cat bat
 abbr -a rg ranger
 
 function cfLogin
