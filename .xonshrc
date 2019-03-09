@@ -1,0 +1,4 @@
+# XONSH WIZARD START
+source-bash "echo loading xonsh foreign shell"
+xontrib load apt_tabcomplete autojump bashisms coreutils docker_tabcomplete jedi prompt_ret_code whole_word_jumping z powerline fzf-widgets
+# XONSH WIZARD END

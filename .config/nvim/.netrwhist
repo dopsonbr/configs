@@ -1,0 +1,9 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =7
+let g:netrw_dirhist_1='/Users/briandopson/github/homedepot/assistedselling/usom-build-img/scripts'
+let g:netrw_dirhist_2='/Users/briandopson/github/homedepot/assistedselling/usom-build-img'
+let g:netrw_dirhist_3='/Users/briandopson/github/homedepot/assistedselling/usom-payment/orderup-deliveries-build-scripts'
+let g:netrw_dirhist_4='/Users/briandopson/github/homedepot/assistedselling/usom-customer/usom-build-scripts'
+let g:netrw_dirhist_5='/Users/briandopson/github/homedepot/assistedselling/usom-client/scripts'
+let g:netrw_dirhist_6='/Users/briandopson/github/homedepot/assistedselling/usom-client'
+let g:netrw_dirhist_7='/Users/briandopson/github/homedepot/assistedselling/usom-client/gulp-tasks'
