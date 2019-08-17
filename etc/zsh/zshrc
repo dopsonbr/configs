@@ -1,0 +1,23 @@
+export PATH=$HOME/bin:/usr/local/bin:$PATH
+
+dotfiles="${HOME}/github/dopsonbr/dotfiles/etc/zsh"
+
+source "${dotfiles}/log.sh"
+source "${dotfiles}/functions.sh"
+
+testAndSource "${dotfiles}/env.sh"
+testAndSource "${dotfiles}/oh_my_zsh.sh"
+testAndSource "${dotfiles}/aliases.sh"
+testAndSource "${dotfiles}/git_aliases.sh"
+testAndSource "${dotfiles}/thd.sh"
+testAndSource "${HOME}/.config/secrets.sh"
+testAndSource "${HOME}/.iterm2_shell_integration.zsh"
+testAndSource "${HOME}/.fzf.zsh"
+testAndSource "${HOME}/.sdkman/bin/sdkman-init.sh"
+
+# Set Spaceship ZSH as a prompt
+autoload -U promptinit; promptinit
+prompt spaceship
+
+# # this must be the last line
+testAndSource /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
